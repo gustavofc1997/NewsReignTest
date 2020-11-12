@@ -1,6 +1,6 @@
 package com.gforeroc.reign.data.network.interceptors
 
-import com.gforeroc.reign.data.helpers.INetworkHelper
+import com.gforeroc.reign.domain.helpers.INetworkHelper
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response

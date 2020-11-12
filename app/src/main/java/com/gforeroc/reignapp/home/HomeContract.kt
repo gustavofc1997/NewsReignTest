@@ -15,6 +15,6 @@ interface HomeContract {
     interface Presenter : BaseCoroutinePresenter<View> {
         fun getNews()
         fun setNewsList(news: ArrayList<NewsItem>? = null)
-
+        fun deleteNews(id: Long)
     }
 }

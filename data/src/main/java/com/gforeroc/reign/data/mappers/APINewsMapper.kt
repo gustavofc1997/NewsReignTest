@@ -13,7 +13,7 @@ object APINewsMapper {
         return NewsItem(
             apiTitle ?: "Title not found",
             apiNews.author ?: "Author not found",
-            date, apiNews.story_url, minutesAgo = minutes
+            date, apiNews.story_url, minutesAgo = minutes, apiNews.story_id
         )
     }
 }

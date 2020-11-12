@@ -46,7 +46,8 @@ abstract class APINewsDependantTest : MockableTest {
         "Hello from the other side",
         null,
         "Gustavo Forero",
-        "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html"
+        "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html",
+        181281
     )
 
     val apiNewWrongDate = APINews(
@@ -54,7 +55,8 @@ abstract class APINewsDependantTest : MockableTest {
         "Hello from the other side",
         null,
         "Gustavo Forero",
-        "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html"
+        "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html",
+        9999
     )
 
     val apiNewNullAuthor = APINews(
@@ -62,6 +64,7 @@ abstract class APINewsDependantTest : MockableTest {
         null,
         null,
         null,
-        "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html"
+        "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html",
+        8888
     )
 }

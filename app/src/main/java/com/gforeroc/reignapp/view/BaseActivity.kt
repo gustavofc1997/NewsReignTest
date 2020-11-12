@@ -5,8 +5,8 @@ import android.view.View
 import com.gforeroc.reignapp.view.callback.ErrorMessageListener
 import com.gforeroc.reignapp.view.callback.IProgressDialogContract
 import com.gforeroc.reignapp.view.dialog.ErrorDialog
-import com.google.android.material.snackbar.Snackbar
 import com.gforeroc.reignapp.view.dialog.SimpleProgressDialog
+import com.google.android.material.snackbar.Snackbar
 import dagger.android.support.DaggerAppCompatActivity
 
 open class BaseActivity : DaggerAppCompatActivity(), BaseView, ErrorMessageListener,
@@ -55,10 +55,20 @@ open class BaseActivity : DaggerAppCompatActivity(), BaseView, ErrorMessageListe
                 )
                 .create()
         }
+
         progressDialog?.show()
     }
 
     override fun hideProgressDialog() {
         progressDialog?.hide()
+    }
+
+    override fun onPause() {
+        progressDialog?.let {
+            if (it.isShowing) {
+                it.cancel()
+            }
+        }
+        super.onPause()
     }
 }

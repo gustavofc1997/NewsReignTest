@@ -5,5 +5,5 @@ data class NewsItem(
     val author: String,
     val creationDate: String,
     val storyUrl: String?,
-    val minutesAgo: Long? = 0
+    val minutesAgo: Long? = 0, val storyId: Long
 )

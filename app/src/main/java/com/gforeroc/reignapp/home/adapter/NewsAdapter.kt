@@ -28,6 +28,10 @@ class NewsAdapter(
         notifyItemRemoved(position)
     }
 
+    fun getItemAtPosition(position: Int): NewsItem {
+        return items[position]
+    }
+
     override fun getItemCount() = items.size
 
 }

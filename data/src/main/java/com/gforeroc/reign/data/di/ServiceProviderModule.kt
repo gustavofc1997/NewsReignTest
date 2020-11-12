@@ -1,7 +1,7 @@
 package com.gforeroc.reign.data.di
 
 import android.content.Context
-import com.gforeroc.reign.data.helpers.INetworkHelper
+import com.gforeroc.reign.domain.helpers.INetworkHelper
 import com.gforeroc.reign.data.network.interceptors.OfflineConnectionInterceptor
 import com.gforeroc.reign.data.network.interceptors.OnlineConnectionInterceptor
 import com.gforeroc.reign.data.network.service.NewsService

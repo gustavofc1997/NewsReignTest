@@ -66,8 +66,8 @@ abstract class SwipeToDeleteCallback (mContext: Context) :
         val deleteIconLeft = itemView.right - deleteIconMargin - intrinsicWidth
         val deleteIconRight = itemView.right - deleteIconMargin
         val deleteIconBottom = deleteIconTop + intrinsicHeight
-        deleteDrawable?.setBounds(deleteIconLeft, deleteIconTop, deleteIconRight, deleteIconBottom)
-        deleteDrawable?.draw(c)
+        deleteDrawable.setBounds(deleteIconLeft, deleteIconTop, deleteIconRight, deleteIconBottom)
+        deleteDrawable.draw(c)
         super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
     }
 
@@ -76,7 +76,7 @@ abstract class SwipeToDeleteCallback (mContext: Context) :
     }
 
     override fun getSwipeThreshold(viewHolder: RecyclerView.ViewHolder): Float {
-        return 0.7f
+        return 0.9f
     }
 
     init {

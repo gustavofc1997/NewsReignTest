@@ -5,16 +5,16 @@ import androidx.lifecycle.OnLifecycleEvent
 import com.gforeroc.reign.domain.interactors.base.BaseInteractor
 import com.gforeroc.reign.domain.models.CoroutinesContextProvider
 import com.gforeroc.reign.domain.models.NewsItem
+import com.gforeroc.reign.domain.models.None
 import com.gforeroc.reignapp.utils.IErrorHandler
 import io.reactivex.disposables.CompositeDisposable
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.withContext
-import java.util.*
-import kotlin.collections.ArrayList
 
 class HomePresenter(
     override val coroutinesContextProvider: CoroutinesContextProvider,
-    private val getNewsInteractor: BaseInteractor<List<NewsItem>>
+    private val getNewsInteractor: BaseInteractor<List<NewsItem>, None>,
+    private val deleteNewsInteractor: BaseInteractor<Unit, Long>
 ) :
     HomeContract.Presenter {
 
@@ -30,7 +30,7 @@ class HomePresenter(
         launchJobOnMainDispatchers {
             try {
                 val list = withContext(coroutinesContextProvider.backgroundContext) {
-                    getNewsInteractor()
+                    getNewsInteractor(None)
                 }
                 val array = arrayListOf<NewsItem>()
                 array.addAll(list)
@@ -50,5 +50,16 @@ class HomePresenter(
             view?.setNewsList(it)
         }
     }
+
+    override fun deleteNews(id: Long) {
+        view?.showLoading()
+        launchJobOnMainDispatchers {
+            withContext(coroutinesContextProvider.backgroundContext) {
+                deleteNewsInteractor(id)
+            }
+            view?.hideLoading()
+        }
+    }
+
 
 }

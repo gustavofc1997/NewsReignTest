@@ -1,8 +1,8 @@
-package com.gforeroc.reign.data.utils
+package com.gforeroc.reign.data.helpers
 
 import android.content.Context
 import android.net.ConnectivityManager
-import com.gforeroc.reign.data.helpers.INetworkHelper
+import com.gforeroc.reign.domain.helpers.INetworkHelper
 
 class NetworkHelper(private val mContext: Context) : INetworkHelper {
 

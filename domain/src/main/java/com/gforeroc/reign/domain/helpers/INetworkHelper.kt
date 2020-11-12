@@ -1,4 +1,4 @@
-package com.gforeroc.reign.data.helpers
+package com.gforeroc.reign.domain.helpers
 
 interface INetworkHelper {
 

@@ -9,10 +9,10 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.gforeroc.reign.domain.models.NewsItem
 import com.gforeroc.reignapp.R
+import com.gforeroc.reignapp.home.adapter.NewsAdapter
 import com.gforeroc.reignapp.home.adapter.NewsAdapterListener
 import com.gforeroc.reignapp.home.adapter.SwipeToDeleteCallback
 import com.gforeroc.reignapp.view.BaseActivity
-import com.gforeroc.reignapp.home.adapter.NewsAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
@@ -57,13 +57,14 @@ class MainActivity : BaseActivity(), HomeContract.View, NewsAdapterListener,
         val swipeToDeleteCallback: SwipeToDeleteCallback = object : SwipeToDeleteCallback(this) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, i: Int) {
                 val position = viewHolder.adapterPosition
+                val item = newsAdapter.getItemAtPosition(position)
                 newsAdapter.removeItem(position)
+                presenter.deleteNews(item.storyId)
             }
         }
         val itemTouchHelper = ItemTouchHelper(swipeToDeleteCallback)
         itemTouchHelper.attachToRecyclerView(rvNews)
     }
-
 
     override fun showLoading() {
         showProgressDialog()

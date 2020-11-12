@@ -45,8 +45,7 @@ ext {
             archComponentsCompiler: "android.arch.lifecycle:compiler:$archComponents_version",
             appCompatV4           : "androidx.legacy:legacy-support-v4:$android_x_appCompat_version",
             appCompatV7           : "androidx.appcompat:appcompat:$android_x_appCompat_version",
-            preferenceV7          : "androidx.preference:preference:$android_x_appCompat_version",
-            preferenceV14         : "androidx.legacy:legacy-preference-v14:$android_x_appCompat_version",
+            preferenceV7          : "androidx.preference:preference-ktx:$android_x_appCompat_version",
     ]
 
     mainApplication = [

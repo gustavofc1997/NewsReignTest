@@ -11,3 +11,4 @@ const val NO_INTERNET_CONNECTION = "no_internet_connection"
 
 const val EMPTY = " "
 const val HTTP_NOT_FOUND = 404
+const val EXCLUDED_NEWS = "excluded_news"
