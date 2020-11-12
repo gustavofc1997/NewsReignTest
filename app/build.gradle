@@ -88,7 +88,4 @@ dependencies {
     implementation androidDependencies.appCompatV7
     implementation androidDependencies.preferenceV7
     implementation androidDependencies.preferenceV14
-    implementation androidDependencies.multidex
-    implementation applicationDependencies.picasso
-
 }

@@ -35,7 +35,6 @@ ext {
     mockito_version = "1.4.0"
 
     androidDependencies = [
-
             appCompat             : "androidx.appcompat:appcompat:$android_x_appCompat_version",
             cardView              : "androidx.cardview:cardview:$android_x_appCompat_version",
             recyclerView          : "androidx.recyclerview:recyclerview:$android_x_appCompat_version",
@@ -48,7 +47,6 @@ ext {
             appCompatV7           : "androidx.appcompat:appcompat:$android_x_appCompat_version",
             preferenceV7          : "androidx.preference:preference:$android_x_appCompat_version",
             preferenceV14         : "androidx.legacy:legacy-preference-v14:$android_x_appCompat_version",
-            multidex              : "androidx.multidex:multidex:2.0.0",
     ]
 
     mainApplication = [
@@ -60,7 +58,6 @@ ext {
             dagger                 : "com.google.dagger:dagger:$dagger_version",
             daggerAndroidProcessor : "com.google.dagger:dagger-android-processor:$dagger_version",
             daggerAndroidSupport   : "com.google.dagger:dagger-android-support:$dagger_version",
-            picasso                : "com.squareup.picasso:picasso:2.71828",
             gson                   : "com.google.code.gson:gson:$gson_version",
     ]
 

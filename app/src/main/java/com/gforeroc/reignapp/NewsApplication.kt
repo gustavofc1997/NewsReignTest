@@ -1,7 +1,5 @@
 package com.gforeroc.reignapp
 
-import android.content.Context
-import androidx.multidex.MultiDex
 import com.gforeroc.reignapp.di.AppComponent
 import com.gforeroc.reignapp.di.DaggerAppComponent
 import dagger.android.AndroidInjector
@@ -17,11 +15,5 @@ class NewsApplication : DaggerApplication() {
         mAppComponent = component
         component.inject(this)
         return component
-    }
-
-
-    override fun attachBaseContext(base: Context) {
-        super.attachBaseContext(base)
-        MultiDex.install(this)
     }
 }
