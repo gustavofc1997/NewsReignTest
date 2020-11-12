@@ -52,12 +52,15 @@ class NewsRepositoryImplTest : MockableTest {
                     "Comic News",
                     "Comic news1",
                     "Gussi",
-                    "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html"
+                    "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html",
+                    182812
                 ), APINews(
                     "2020-11-09T13:52:55.000Z",
                     "Comic News2",
-                    "Comic newss", "Gussi y And",
-                    "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html"
+                    "Comic newss",
+                    "Gussi y And",
+                    "https://nymag.com/intelligencer/2020/11/inside-the-new-york-times-heated-reckoning-with-itself.html",
+                    9999
                 )
             )
         )
