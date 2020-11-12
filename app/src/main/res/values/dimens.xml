@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="close_image_view_margin">16dp</dimen>
+    <dimen name="min_margin">12dp</dimen>
+    <dimen name="small_margin">6dp</dimen>
+    <dimen name="margin_left">22dp</dimen>
+    <dimen name="custom_button_margin_bottom">6dp</dimen>
+    <dimen name="custom_button_padding_horizontal">16dp</dimen>
+    <dimen name="message_separation">30dp</dimen>
+    <dimen name="message_padding">60dp</dimen>
+    <dimen name="message_text_size">16sp</dimen>
+</resources>

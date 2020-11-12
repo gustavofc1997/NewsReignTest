@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        minSdkVersion 26
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+androidExtensions {
+    experimental = true
+}
+
+dependencies {
+    def applicationDependencies = rootProject.ext.mainApplication
+    def testDependencies = rootProject.ext.unitTesting
+    def networkingDependencies = rootProject.ext.networking
+    implementation project(':domain')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation applicationDependencies.kotlinJDK
+
+    //Coroutines
+    implementation applicationDependencies.kotlinCoroutines
+    implementation applicationDependencies.kotlinCoroutinesAndroid
+
+    //Retrofit
+    implementation networkingDependencies.retrofit
+    implementation networkingDependencies.gsonConverter
+    implementation networkingDependencies.rxAdapter
+    implementation networkingDependencies.okhttpLoggingInterceptor
+    implementation networkingDependencies.coroutineAdapter
+    implementation networkingDependencies.retrofitConverterScalar
+
+    //Dagger
+    implementation applicationDependencies.dagger
+    kapt applicationDependencies.daggerCompiler
+
+    //Unit test
+    testImplementation testDependencies.mockk
+    testImplementation testDependencies.mockitoCore
+    testImplementation testDependencies.junit
+    testImplementation applicationDependencies.kotlinCoroutines
+
+}

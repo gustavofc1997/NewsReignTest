@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NewsByReign</string>
+    <string name="snackbar_no_internet_connection">Seems like we’re not connecting. Check your internet settings and try again.</string>
+    <string name="connectivity_error_snackbar">We could not properly contact the server. Please try again later.</string>
+    <string name="snackbar_unknown_error">Oops! It seems we are experiencing some issues at this time. Please try again later.</string>
+    <string name="uploading_info">Loading News!.</string>
+    <string name="connection_error_message">Your session was interrupted. Please check your connection and try refreshing this page.</string>
+    <string name="try_again">Try again</string>
+    <string name="connection_error_title">Connection lost</string>
+    <string name="txt_default_empty">…</string>
+</resources>
